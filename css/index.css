@@ -1,7 +1,6 @@
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif; /* Usa una fuente similar a la del boceto */
 }
-
 .header {
     display: grid;
     grid-template-columns: 10% 20% 60% 10%;
@@ -12,6 +11,7 @@ body {
     border: 2px solid #000;
     margin-bottom: 20px;
 }
+
 
 .logo img {
     width: 30px;
@@ -191,4 +191,43 @@ width: 99%;
     border: none;
     outline: none;
     cursor: pointer;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Espaciado horizontal */
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 3.5rem;
+    color: black; 
+    border: 2px solid black;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+footer .colegio {
+    display: flex;
+    align-items: center;
+}
+
+footer .colegio img {
+    width: 30px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+footer .colegio span {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+footer span:last-of-type {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
 }
