@@ -111,7 +111,7 @@ function crearTaskItem(tarea) {
     seccion2.appendChild(taskItem);
 }
 
-// Filtrar las tareas según el término de búsqueda
+// Filtrar las tareas según el término de búsqueda y el estado
 function filtrarTareas() {
     let searchTerm = searchInput.value.toLowerCase();
     let taskItems = document.querySelectorAll(".task-item");
@@ -119,8 +119,10 @@ function filtrarTareas() {
     taskItems.forEach(item => {
         let nombre = item.querySelector(".nombre").textContent.toLowerCase();
         let asignado = item.querySelector(".asignado").textContent.toLowerCase();
-        
-        if (nombre.includes(searchTerm) || asignado.includes(searchTerm)) {
+        let estado = item.querySelector(".estado").textContent.toLowerCase();
+
+        // Mostrar la tarea si el nombre, asignado o estado coinciden con el término de búsqueda
+        if (nombre.includes(searchTerm) || asignado.includes(searchTerm) || estado.includes(searchTerm)) {
             item.style.display = "flex"; // Mostrar tarea
         } else {
             item.style.display = "none"; // Ocultar tarea
